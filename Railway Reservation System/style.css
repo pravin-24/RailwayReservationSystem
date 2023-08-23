@@ -1,0 +1,115 @@
+*
+{
+    padding: 2px;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: linear-gradient(to right top, #0066ff, #005be0, #0050c1, #0045a3, #003a85);
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container
+{
+    width: 100%;
+    background-image: linear-gradient(to left top, #d19c6b, #df9a8a, #dd9ea8, #cfa8bf, #bfb2ca, #b6afcf, #aaadd4, #9aacd8, #879fe3, #7692ed, #6883f5, #5f73fb);
+    padding: 25px 30px;
+    border-radius: 5px;
+    text-align: left;
+}
+.menu-bar
+{
+    background: linear-gradient(to right top, #051937, #002265, #002993, #0029c1, #121beb);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li
+{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover
+{
+    background: darkgrey;
+    border-radius: 50px;
+}
+.menu-bar .fa
+{
+    margin-right: 3px;
+}
+.reservation-form .container
+{
+    max-width: 725px;
+    width: 100%;
+    background-image: linear-gradient(to left top, #d19c6b, #df9a8a, #dd9ea8, #cfa8bf, #bfb2ca, #b6afcf, #aaadd4, #9aacd8, #879fe3, #7692ed, #6883f5, #5f73fb);   
+    padding: 25px 30px;
+    border-radius: 5px;
+    text-align: left;
+}
+.reservation-form .fbox
+{
+    border: #4cec95;
+    display: flexbox;
+    list-style-type: disc;
+    margin-left: 10px;
+    border-radius: 20px;
+
+}
+.btn 
+{
+    background-color: #ff3300;
+    color: white;
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    margin-left: 110px;
+  }
+.ul
+ {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+  }  
+.table
+{
+    align-items: center;
+    align-content: center;
+}  
+.container1
+{
+    max-width: 800px;
+    width: 100%;
+    background-image: linear-gradient(to right top, #1700ff, #7257ff, #a590ff, #d3c7ff, #ffffff);
+	padding: 25px 30px;
+    border-radius: 5px;
+    text-align: left;
+}
+.container2
+{
+    max-width: 800px;
+    width: 100%;
+    background-image: linear-gradient(to right top, #bbff50, #96fa6a, #72f481, #4cec95, #1be3a6);
+    padding: 25px 30px;
+    border-radius: 5px;
+    text-align: left;
+}

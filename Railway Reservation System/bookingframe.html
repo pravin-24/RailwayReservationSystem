@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking | IRCTC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    ul {
+        list-style: none;
+    }
+
+    #clock {
+        font-family: 'Orbitron', sans-serif;
+        color: #66ff99;
+        font-size: 56px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #fbox input {
+        display: table-cell;
+        padding: 2px;
+    }
+
+    p {
+        color: gold;
+        font-family: arial;
+    }
+</style>
+<form id="f1" action="file:///C:/Users/ELCOT/OneDrive/Desktop/2ND%20SEM/EoIT/Lab%20Experiment/Exp%20no_6/payment.html"
+    method="POST" onsubmit="return validate()">
+    <div class="reservation-form">
+        <div id="clock"></div>
+        <div class="fbox">
+            <h2 style="color: gold;">Ticket Booking</h2>
+            <ul>
+                <li>
+                    <input type="text" id="passengerdet" placeholder="  Passenger Name" name="passengerName"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; ">
+                    <p id="p1"></p>
+                </li>
+                <li>
+                    <input type="number" id="age" placeholder="  Age"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; ">
+                </li>
+                <li>
+                    <select id="gender_type" onchange="myFunction()"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; color: #8c8c8c; ">
+                        <option value="">Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                    </select>
+                    <p id="demo"></p>
+                </li>
+                <li>
+                    <select id="nationality" onchange="myFunction()"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; color: #8c8c8c;">
+                        <option value="">Nationality</option>
+                        <option value="India">India</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <p id="demo1"></p>
+                </li>
+                <li>
+                    <input type="tel" id="phone" name="phone" placeholder="  Mobile Number"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; ">
+                    <p id="p2"></p>
+                </li>
+                <li>
+                    <input type="text" id="email" placeholder="  Email"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; ">
+                    <p id="p3"></p>
+                </li>
+                <li>
+                    <input type="number" id="pincode" placeholder="  Pincode"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; ">
+                </li>
+                <li>
+                    <input type="text" id="state" placeholder="  State"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; "
+                        required>
+                </li>
+                <li>
+                    <input type="text" id="city" placeholder="  City"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; "
+                        required>
+                </li>
+                <li>
+                    <input type="text" id="boardstation" placeholder="  Boarding Station"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; "
+                        required>
+                </li>
+                <li>
+                    <input type="text" id="deststation" placeholder="  Destination Station"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; "
+                        required>
+                </li>
+                <li>
+                    <input type="date" id="start" name="trip-start"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; color: #8c8c8c;">
+                </li>
+                <li>
+                    <select id="class" onchange="myFunction()"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; color: #8c8c8c; ">
+                        <option value="">Choose the class</option>
+                        <option value="AC First Class">AC First Class</option>
+                        <option value="AC 2-Tier">AC 2-Tier</option>
+                        <option value="AC 3-Tier">AC 3-Tier</option>
+                        <option value="First Class">First Class</option>
+                        <option value="AC Chair Car">AC Chair Car</option>
+                        <option value="Sleeper">Sleeper</option>
+                        <option value="Second Sitting">Second Sitting</option>
+                    </select>
+                    <p id="demo2"></p>
+                </li>
+                <li>
+                    <select id="berth" onchange="myFunction()"
+                        style="width : 400px;height : 40px; border : #ffffff; background-color : #f0f8ff; text-align : left; color: #8c8c8c; ">
+                        <option value="">Preference</option>
+                        <option value="No Preference">No Preference</option>
+                        <option value="Side Lower Berth">Side Lower Berth</option>
+                        <option value="Side Upper Berth">Side Upper Berth</option>
+                        <option value="Lower Berth">Lower Berth</option>
+                        <option value="Middle Berth">Middle Berth</option>
+                        <option value="Upper Berth">Upper Berth</option>
+                    </select>
+                    <p id="demo3"></p>
+                </li>
+                <br>
+                <script>
+                    function currentTime() {
+                        var date = new Date();
+                        var hour = date.getHours();
+                        var min = date.getMinutes();
+                        var sec = date.getSeconds();
+                        hour = updateTime(hour);
+                        min = updateTime(min);
+                        sec = updateTime(sec);
+                        document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+                        var t = setTimeout(function () { currentTime() }, 1000);
+                    }
+
+                    function updateTime(k) {
+                        if (k < 10) {
+                            return "0" + k;
+                        }
+                        else {
+                            return k;
+                        }
+                    }
+
+                    currentTime();
+
+                    document.getElementById("passengerdet").addEventListener("change", myFunction1);
+                    function myFunction1() {
+                        var a = document.getElementById("passengerdet");
+                        a.value = a.value.toUpperCase();
+                    }
+
+                    function myFunction() {
+                        var w = document.getElementById("gender_type").value;
+                        document.getElementById("demo").innerHTML = '<b style="color:white">' + "Your choice: " + '</b>' + '<b style="color:gold">' + w + '</b>';
+                        var x = document.getElementById("nationality").value;
+                        document.getElementById("demo1").innerHTML = '<b style="color:white">' + "Your choice: " + '</b>' + '<b style="color:gold">' + x + '</b>';
+                        var y = document.getElementById("class").value;
+                        document.getElementById("demo2").innerHTML = '<b style="color:white">' + "Your choice: " + '</b>' + '<b style="color:gold">' + y + '</b>';
+                        var z = document.getElementById("berth").value;
+                        document.getElementById("demo3").innerHTML = '<b style="color:white">' + "Your choice: " + '</b>' + '<b style="color:gold">' + z + '</b>';
+                    }
+
+
+                    function fun() {
+                        document.getElementById("f1").reset();
+                    }
+
+                    function validate() {
+                        var box1 = document.getElementById("passengerdet");
+                        if (box1.value == "") {
+                            document.getElementById("p1").innerHTML = "*Please enter your name";
+                            box1.focus();
+                            box1.style.backgroundColor = "red";
+                            return false;
+                        }
+                        if (box1.value.length > 15) {
+                            document.getElementById("p1").innerHTML = "*Name length is too large";
+                            box1.focus();
+                            box1.style.backgroundColor = "red";
+                            return false;
+                        }
+                        var box2 = document.getElementById("phone");
+                        if (box2.value == "" || isNaN(box2.value) || box2.value.length > 10 || box2.value.length < 10) {
+                            document.getElementById("p2").innerHTML = "*Please enter a valid phone number";
+                            box2.focus();
+                            box2.style.backgroundColor = "red";
+                            return false;
+                        }
+                         
+                        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(f1.email.value)) {
+                            return (true)
+                        }
+                        alert("You have entered an invalid email address!")
+                        return (false)
+                    }
+                </script>
+                <br>
+                <input type="submit" value="Submit"
+                    style="width:90px; height:40px; margin-left: 40px; background-color: #2eb82e; color: white;">
+                <input type="button" value="Reset" onClick="fun()"
+                    style="width:90px; height:40px; margin-left: 30px; background-color: #e60000; color: white;">
+                <button onclick="window.print()"
+                    style="background-color: #43abff; width: 90px; height:40px; margin-left: 30px; color: white;">Print</button>
+                <br><br>
+                <a>
+                    <marquee scrollamount="13">
+                        <p><b style="color: gold;">(Ticket details will be sent to the registered email and registered
+                                mobile number)</b>
+                        </p>
+                    </marquee>
+                </a>
+        </div>
+    </div>
+</form>
+</head>
+
+</html>
